@@ -14,7 +14,8 @@
         android:layout_marginBottom="25dp"
         android:src="@drawable/ic_action_novo_aluno"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:contentDescription="@string/botao_adicionar_aluno" />
 
     <ListView
         android:id="@+id/activity_lista_alunoslistview"
