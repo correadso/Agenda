@@ -2,13 +2,14 @@ package br.com.alura.agenda.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
 @Entity
 public class Aluno implements Serializable {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String nome;
     private String telefone;
@@ -51,6 +52,13 @@ public class Aluno implements Serializable {
         return email;
     }
 
+    /*
+    O alerta de múltiplos construtores indica que o Room vai usar o construtor sem argumento em casos como esse.
+    Para evitar o alerta, você pode adicionar a anotação @Ignore no construtor que o Room pode ignorar.
+    Em aula, decidi que o construtores que recebem um nome, telefone e email podiam ser ignorados,
+    então ficou assim:
+    * */
+    @Ignore
     public Aluno(String nome, String telefone, String email) {
         this.nome = nome;
         this.telefone = telefone;
