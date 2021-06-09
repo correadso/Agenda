@@ -6,4 +6,5 @@
     <string name="salvar_aluno">Salvar aluno</string>
     <string name="remover_aluno">Remover</string>
     <string name="botao_adicionar_aluno">Botão para adicionar novo aluno</string>
+    <string name="sobrenome">Sobrenome</string>
 </resources>
